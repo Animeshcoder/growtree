@@ -19,14 +19,15 @@ jobs:
       - name: Import GPG private key
         run: |
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import --batch
-        env:
-          GNUPGHOME: /home/runner/.gnupg
 
-      - name: Trust the GPG key
+      - name: Trust the GPG key fully
         run: |
-          echo "400B17BA6C84907C:6:" | gpg --import-ownertrust
-        env:
-          GNUPGHOME: /home/runner/.gnupg
+          gpg --no-tty --command-fd 0 --edit-key 400B17BA6C84907C << EOTRUST
+          trust
+          5
+          y
+          quit
+          EOTRUST
 
       - name: Configure dput
         run: |

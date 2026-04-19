@@ -1,0 +1,37 @@
+name: Upload to Launchpad PPA
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install required tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dput gnupg devscripts
+
+      - name: Import GPG private key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import --batch
+          echo "${{ secrets.GPG_PASSPHRASE }}" | gpg --batch --yes --passphrase-fd 0 --pinentry-mode loopback -u 400B17BA6C84907C --clearsign /dev/null
+
+      - name: Configure dput
+        run: |
+          cat > ~/.dput.cf << 'DPUTEOF'
+          [growtree-ppa]
+          fqdn = ppa.launchpad.net
+          method = ftp
+          incoming = ~animesh006/ubuntu
+          login = anonymous
+          allow_unsigned_uploads = 0
+          DPUTEOF
+
+      - name: Upload to PPA
+        run: |
+          dput -f growtree-ppa growtree_1.0-1_source.changes

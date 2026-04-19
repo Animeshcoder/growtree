@@ -14,12 +14,19 @@ jobs:
       - name: Install required tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y dput gnupg devscripts
+          sudo apt-get install -y dput gnupg
 
       - name: Import GPG private key
         run: |
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import --batch
-          echo "${{ secrets.GPG_PASSPHRASE }}" | gpg --batch --yes --passphrase-fd 0 --pinentry-mode loopback -u 400B17BA6C84907C --clearsign /dev/null
+        env:
+          GNUPGHOME: /home/runner/.gnupg
+
+      - name: Trust the GPG key
+        run: |
+          echo "400B17BA6C84907C:6:" | gpg --import-ownertrust
+        env:
+          GNUPGHOME: /home/runner/.gnupg
 
       - name: Configure dput
         run: |
@@ -32,6 +39,6 @@ jobs:
           allow_unsigned_uploads = 0
           DPUTEOF
 
-      - name: Upload to PPA
+      - name: Upload to Launchpad PPA
         run: |
           dput -f growtree-ppa growtree_1.0-1_source.changes

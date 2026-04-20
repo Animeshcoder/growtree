@@ -17,7 +17,7 @@ dpkg-source: warning: no source format specified in debian/source/format, see dp
 dpkg-source: info: using source format '1.0'
 dpkg-source: info: building growtree using existing growtree_1.0.orig.tar.gz
 dpkg-source: info: building growtree in growtree_1.0-2.diff.gz
-dpkg-source: warning: diff '/home/animesh006/growtree_1.0-2.diff.gz.new.9KnWqs' doesn't contain any patch
+dpkg-source: warning: ignoring deletion of file debian/compat
 dpkg-source: info: building growtree in growtree_1.0-2.dsc
  dpkg-genbuildinfo --build=source -O../growtree_1.0-2_source.buildinfo
  dpkg-genchanges -sd --build=source -O../growtree_1.0-2_source.changes
@@ -26,9 +26,8 @@ dpkg-genchanges: info: not including original source code in upload
 dpkg-buildpackage: info: source-only, diff-only upload (original source NOT included)
 Now running lintian growtree_1.0-2_source.changes ...
 E: growtree source: build-depends-on-build-essential-package-without-using-version gcc [Build-Depends: gcc]
-E: growtree source: debian-files-list-in-source [debian/files]
+E: growtree source: declares-possibly-conflicting-debhelper-compat-versions 13 vs elsewhere 13 [debian/compat]
 W: growtree source: missing-debian-source-format
-W: growtree source: no-debian-changes
 Finished running lintian.
 Now signing changes and any dsc files...
 long key IDs are discouraged; please use key fingerprints instead

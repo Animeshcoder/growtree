@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 20 Apr 2026 13:00:00 +0530
+Source: growtree
+Built-For-Profiles: noudeb
+Architecture: source
+Version: 1.0-2
+Distribution: jammy
+Urgency: low
+Maintainer: Animesh Awasthi <animeshawasthi006@gmail.com>
+Changed-By: Animesh Awasthi <animeshawasthi006@gmail.com>
+Changes:
+ growtree (1.0-2) jammy; urgency=low
+ .
+   * Fix: remove debian/compat to resolve debhelper compat conflict
+Checksums-Sha1:
+ ca2faf02ee34ad5d4fef8c8c310e65311518ed14 1650 growtree_1.0-2.dsc
+ 33054fae17aba7cf9bf43caa68576b9607ab81b5 9166 growtree_1.0.orig.tar.gz
+ a0fddd5458378c1bf3c10dd2f5c060d1347741ed 20 growtree_1.0-2.diff.gz
+ 0061c553a3afcfd757705448ace4e6aafd5ecfcd 7022 growtree_1.0-2_source.buildinfo
+Checksums-Sha256:
+ 52aa46b3cddae59691cb3e7847f443b4e6546caff8fe078c91bd6294291faa41 1650 growtree_1.0-2.dsc
+ 8a873015a696d48470b7c456b6391311dfceca8c170419cd5cc1baac12710e56 9166 growtree_1.0.orig.tar.gz
+ f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec 20 growtree_1.0-2.diff.gz
+ 3ec3d379506cde2919545ccac322a1b6152295374908c2725dd813a276dbb559 7022 growtree_1.0-2_source.buildinfo
+Files:
+ 87af7b44d8975a19964d369d52013f09 1650 games optional growtree_1.0-2.dsc
+ 54054c855ec25926add85a8b725dfb45 9166 games optional growtree_1.0.orig.tar.gz
+ 4a4dd3598707603b3f76a2378a4504aa 20 games optional growtree_1.0-2.diff.gz
+ c522790aab78b1531576ab633d9cd665 7022 games optional growtree_1.0-2_source.buildinfo
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE3teaHbuVhoF8WPEhQAsXumyEkHwFAmnl22wACgkQQAsXumyE
+kHxaHA//QHcVjaaWTT2cgzQpuCAwwKZAl9wLh4lZ/grkNFY48xTENBoNMaMRvkEC
+px1KaQJcyd/cx+479pMJj5Nl5p7qlUcOWHAYZSxkGKwcUcLLPXHAwP9yKbHF2ba7
+++WRufVW063yv2YvXw2AaLvH+/kmYa7J6YfMdV04Tha8DAk5cp6vkcOCL0mcgB1K
+IOWZBe8ulfWKo/VliOgsGjb82+ryMM0K6XlWyIzVfHE8szUheh11ReTpwSZmc8Tk
+99JMobPKU9DrcfC9LaMPLNY96RlHJmSCdSbghsyftch/41Z1bpFc3V4NudyavGXc
++A/T4/OjztBxlolSM7Q2LY3cfnewMm+ZXA3SjP9mYxZ30o9asWR1DIEWbtlKRMsN
+K8mSZA9iiB0useahxMxQOg5EnZGPcZUEos8zhYSdLpVDl+bFVAoSNw2wVQx2qums
+S3y5XqldJl9hgLSwjYpjje0wb9g0oYpjF9urfKs0AdRgr/bfM2JAlzf9KqLNL55Y
+nBqD/Tct63ji9qtAgeF+QqzhWQvcbac+Esl8P3CtF7MBw1Eep9kPRkQUTyQM1r13
+SVBw53sn2BsXw+ZMNDNSqLLEnYSK84+XL6n8O6fVJEpwpGD5Jx2bZE6XwE/LhEEv
+b58RrPn1/KFZf7Ymfs6GstDSbaoSi/uWoKnoOs/NHLRbK97bx1I=
+=qHPB
+-----END PGP SIGNATURE-----

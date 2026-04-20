@@ -42,4 +42,4 @@ jobs:
 
       - name: Upload to Launchpad PPA
         run: |
-          dput -f growtree-ppa growtree_1.0-1_source.changes
+          dput -f growtree-ppa growtree_1.0-2_source.changes

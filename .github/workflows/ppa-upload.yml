@@ -35,7 +35,7 @@ jobs:
           [growtree-ppa]
           fqdn = ppa.launchpad.net
           method = ftp
-          incoming = ~animesh006/ubuntu
+          incoming = ~animesh006/ubuntu/growtree/
           login = anonymous
           allow_unsigned_uploads = 0
           DPUTEOF
